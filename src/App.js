@@ -58,7 +58,7 @@ function App() {
     auth.useDeviceLanguage()
 
     try {
-      await auth.signInWithRedirect(provider)
+      await auth.signInWithPopup(provider)
     }
     catch (error) {
       console.log(error)
@@ -84,6 +84,8 @@ function App() {
       await messagesRef.add({
         text: text,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        username: auth.currentUser.displayName,
+        photoURL: auth.currentUser.photoURL,
       })
 
     }
@@ -99,7 +101,7 @@ function App() {
     <div>
       {user ? (
         <div>
-          <Channel rf={channelScrollref} user={user} db={db} signOut={signOut} />
+          <Channel rf={channelScrollref} db={db} signOut={signOut} />
           <Submit text={text} setText={setText} submit={sendMessage} />
         </div>
       ) : (

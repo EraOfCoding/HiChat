@@ -3,7 +3,7 @@ import MessageContainer from '../components/MessageContainer'
 
 import '../style/Channel.css'
 
-function Channel({ user = null, db = null, rf = null, signOut = null }) {
+function Channel({ db = null, rf = null, signOut = null }) {
     const [messages, setMessages] = useState([])
 
     useEffect(() => {
@@ -34,8 +34,8 @@ function Channel({ user = null, db = null, rf = null, signOut = null }) {
                                 key={message.key}
                                 className="message"
                                 text={message.text}
-                                username={user.displayName}
-                                profile={user.photoURL}
+                                username={message.username}
+                                profile={message.photoURL}
                             />
                         )
                     })}
