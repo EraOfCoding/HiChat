@@ -1,0 +1,51 @@
+.channel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-image: url(../images/chat_bg.jpg);
+  background-size: contain;
+}
+
+.channel {
+  margin: 20px;
+  margin-bottom: 0 !important;
+  width: 70vw;
+  height: 620px;
+  background-color: #2f353d;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#bg {
+  background-color: #2f353d;
+  width: 72vw;
+  height: 100vh;
+}
+
+#signout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: rgb(93, 171, 235);
+  width: 150px;
+  height: 40px;
+  font-size: 1.3rem;
+  transition: 500ms;
+}
+
+#signout:hover {
+  background-color: rgba(93, 171, 235, 0);
+  color: rgb(93, 171, 235);
+  border: 1px solid rgb(93, 171, 235);
+  transition: 500ms;
+}
+
+.message {
+  width: auto;
+  padding: 0 30px 0 30px;
+}

@@ -1,0 +1,44 @@
+.home {
+  padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home h1 {
+  padding-bottom: 20px;
+}
+
+.home button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10vh;
+  cursor: pointer;
+  background-color: rgb(93, 171, 235);
+  width: 300px;
+  height: 50px;
+  font-size: 1.7rem;
+  transition: 500ms;
+}
+
+.home button:hover {
+  background-color: rgba(93, 171, 235, 0);
+  color: rgb(93, 171, 235);
+  border: 1px solid rgb(93, 171, 235);
+  transition: 500ms;
+}
+
+.home a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  cursor: pointer;
+  bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.home a:hover {
+  text-decoration: underline;
+}

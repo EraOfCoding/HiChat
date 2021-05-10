@@ -1,0 +1,34 @@
+.loading-container {
+  width: 100vw;
+  height: 80vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rand-text {
+  padding-top: 30px;
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border-right: 10px solid rgb(93, 171, 235);
+  border-left: 10px solid rgb(93, 171, 235);
+  border-top: 10px solid rgb(93, 171, 235);
+  border-bottom: 10px solid rgba(93, 171, 235, 0);
+  animation: loading 1s infinite ease;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

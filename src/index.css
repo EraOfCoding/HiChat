@@ -1,13 +1,52 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(./fonts/OpenSans-Regular.ttf);
+}
+
 body {
+  background-color: #22272e;
+  color: white;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: OpenSans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+h5 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+h6 {
+  font-size: 1.2rem;
+}
+p {
+  font-size: 1.1rem;
 }
