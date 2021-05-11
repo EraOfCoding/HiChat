@@ -8,6 +8,7 @@
 
 .home h1 {
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .home button {
@@ -41,4 +42,17 @@
 
 .home a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 360px) {
+  .home button {
+    font-size: 1.5rem;
+    width: 250px;
+    height: 45px;
+  }
+
+  .home h5 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
 }

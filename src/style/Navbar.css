@@ -1,0 +1,49 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 7vh;
+  background-color: #2f353d;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.726);
+}
+
+.app-name {
+  padding-left: 15px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+  padding-right: 15px;
+}
+
+.nav-button {
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #7dc7ff;
+  color: #7dc7ff;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100px;
+  height: 30px;
+  transition: 500ms;
+}
+
+.nav-button:hover {
+  background-color: #7dc7ff;
+  color: black;
+  transition: 500ms;
+}
+
+@media only screen and (max-width: 800px) {
+  .btn-container {
+    width: 180px;
+  }
+
+  .nav-button {
+    width: 80px;
+    height: 30px;
+  }
+}

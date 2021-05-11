@@ -42,7 +42,6 @@ function Channel({ db = null, rf = null, signOut = null }) {
                     < span ref={rf} />
                 </div>
             </div>
-            <button onClick={signOut} id="signout">Sign Out</button>
         </div >
     )
 }

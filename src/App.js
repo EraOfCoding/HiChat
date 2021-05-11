@@ -7,6 +7,7 @@ import Channel from './pages/Channel'
 import Loading from './components/Loading'
 import Home from './pages/Home'
 import Submit from './components/Submit'
+import Navbar from './components/Navbar'
 
 const {
   REACT_APP_API_KEY,
@@ -101,7 +102,8 @@ function App() {
     <div>
       {user ? (
         <div>
-          <Channel rf={channelScrollref} db={db} signOut={signOut} />
+          <Navbar signout={signOut} />
+          <Channel rf={channelScrollref} db={db} />
           <Submit text={text} setText={setText} submit={sendMessage} />
         </div>
       ) : (
