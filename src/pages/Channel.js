@@ -30,7 +30,7 @@ function Channel({ db = null, rf = null, signOut = null }) {
                 <div className="channel">
                     <div className="msg-start">
                         <h1>Welcome to HiChat</h1>
-                        <p>Hi chat! This is a beginning of our conversation.</p>
+                        <p>Hi chat! This is the beginning of our conversation.</p>
                         <hr />
                     </div>
                     {messages.map(message => {
