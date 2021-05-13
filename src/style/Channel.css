@@ -51,6 +51,10 @@
   align-items: center;
 }
 
+.msg-start h1 {
+  margin-top: 10px;
+}
+
 .msg-start p {
   padding-top: 15px;
   color: #d6d6d6;
