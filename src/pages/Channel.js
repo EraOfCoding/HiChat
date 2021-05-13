@@ -28,6 +28,11 @@ function Channel({ db = null, rf = null, signOut = null }) {
         <div className="channel-container">
             <div id="bg">
                 <div className="channel">
+                    <div className="msg-start">
+                        <h1>Welcome to HiChat</h1>
+                        <p>Hi chat! This is a beginning of our conversation.</p>
+                        <hr />
+                    </div>
                     {messages.map(message => {
                         return (
                             <MessageContainer
@@ -39,7 +44,7 @@ function Channel({ db = null, rf = null, signOut = null }) {
                             />
                         )
                     })}
-                    < span ref={rf} />
+                    <span className="msg-bottom" ref={rf} />
                 </div>
             </div>
         </div >

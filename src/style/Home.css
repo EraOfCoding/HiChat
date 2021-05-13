@@ -1,5 +1,5 @@
 .home {
-  padding: 10vh 0;
+  padding: 15vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +14,10 @@
 .home button {
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 10vh;
   cursor: pointer;
-  background-color: rgb(93, 171, 235);
+  background-color: rgb(108, 189, 255);
   width: 300px;
   height: 50px;
   font-size: 1.7rem;
@@ -26,8 +26,8 @@
 
 .home button:hover {
   background-color: rgba(93, 171, 235, 0);
-  color: rgb(93, 171, 235);
-  border: 1px solid rgb(93, 171, 235);
+  color: rgb(108, 189, 255);
+  border: 1px solid rgb(108, 189, 255);
   transition: 500ms;
 }
 

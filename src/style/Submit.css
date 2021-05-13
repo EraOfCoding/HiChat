@@ -1,21 +1,31 @@
 .form-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 27px;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.form {
+  background-color: #52565e;
+  border-radius: 7px;
+  width: 67vw;
+  height: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .holder {
   width: 60vw;
   height: 43px;
-  background-color: #464e5a;
+  background-color: #52565e;
   color: white;
   border-radius: 7px;
   border: none;
   outline: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0 10px;
 }
 
@@ -24,7 +34,7 @@
   height: 55px;
   width: 55px;
   background-color: rgba(0, 0, 0, 0);
-  font-size: 2.1rem;
+  font-size: 1.9rem;
   border: none;
 }
 

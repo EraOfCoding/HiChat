@@ -3,21 +3,21 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  background-image: url(../images/chat_bg.jpg);
-  background-size: contain;
+  background-image: url(../images/bg.png);
+  background-size: cover;
 }
 
 .channel {
   margin-bottom: 0 !important;
   width: 70vw;
   height: 83vh;
-  background-color: #2f353d;
+  background-color: #3a3f46;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 #bg {
-  background-color: #2f353d;
+  background-color: #3a3f46;
   width: 70vw;
   height: 93vh;
 }
@@ -44,9 +44,38 @@
   transition: 500ms;
 }
 
+.msg-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.msg-start p {
+  padding-top: 20px;
+  color: #d6d6d6;
+}
+
+.msg-start hr {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  height: 1px;
+  width: 50vw;
+  border-bottom: 1px solid !important;
+  border: none;
+}
+
 .message {
   width: auto;
   padding: 0 30px 0 30px;
+}
+
+.msg-bottom {
+  display: block;
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  bottom: 100px;
 }
 
 @media only screen and (max-width: 800px) {

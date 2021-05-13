@@ -4,7 +4,8 @@
 }
 
 body {
-  background-color: #22272e;
+  background-image: url("./images/bg.png");
+  background-size: cover;
   color: white;
   margin: 0;
   font-family: OpenSans;
