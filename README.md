@@ -1,9 +1,13 @@
 # HiChat
+
 ### Simple, open source chat app!
+
 https://hichat-wastaken.netlify.app/
 
 It took me few days to make it.
 If you have any suggestions please contact me.
+
+### Thanks [mrgln](https://github.com/mrgln) for making awesome space background :)
 
 ## Getting Started with Create React App
 
