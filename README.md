@@ -3,7 +3,7 @@
 https://hichat-wastaken.netlify.app/
 
 It took me few days to make it.
-If you have any suugestions please contact me.
+If you have any suggestions please contact me.
 
 ## Getting Started with Create React App
 
