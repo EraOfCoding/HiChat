@@ -4,6 +4,7 @@
 }
 
 body {
+  background-color: #44474d;
   background-image: url("./images/bg.png");
   background-size: cover;
   color: white;
