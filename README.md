@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# HiChat
+### Simple, open source chat app!
+https://hichat-wastaken.netlify.app/
+
+It took me few days to make it.
+If you have any suggestions please contact me.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
