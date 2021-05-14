@@ -40,7 +40,7 @@ function Channel({ auth = null, db = null }) {
                     }))
                     setMessages(data)
                     channelScrollref.current.scrollIntoView({ behavior: 'smooth' })
-                    if (auth !== null ? data[data.length - 1].username !== auth.currentUser.displayName : false) sound()
+                    if (auth !== null ? data[data.length - 1].username != auth.currentUser.displayName : false) sound()
                 })
 
             return unsubscribe
