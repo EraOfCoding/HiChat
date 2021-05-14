@@ -3,10 +3,15 @@ import MessageContainer from '../components/MessageContainer'
 
 import '../style/Channel.css'
 
-function Channel({ db = null }) {
+import { useSound } from 'use-sound'
+import msgsound from '../audio/notification_sound.m4a'
+
+function Channel({ auth = null, db = null }) {
     const [messages, setMessages] = useState([])
 
     const channelScrollref = useRef()
+
+    const [sound] = useSound(msgsound)
 
     const buildDate = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July",
@@ -35,6 +40,7 @@ function Channel({ db = null }) {
                     }))
                     setMessages(data)
                     channelScrollref.current.scrollIntoView({ behavior: 'smooth' })
+                    if (auth !== null ? data[data.length - 1].username !== auth.currentUser.displayName : false) sound()
                 })
 
             return unsubscribe

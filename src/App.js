@@ -37,6 +37,7 @@ function App() {
   const [initializing, setInitializing] = useState(true)
   const [text, setText] = useState("")
 
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
@@ -100,7 +101,7 @@ function App() {
       {user ? (
         <div>
           <Navbar signout={signOut} />
-          <Channel db={db} />
+          <Channel auth={auth} db={db} />
           <Submit text={text} setText={setText} submit={sendMessage} />
         </div>
       ) : (
