@@ -19,13 +19,19 @@ code {
     monospace;
 }
 
+pre {
+  color: white;
+  font-family: OpenSans;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
+p,
+pre {
   margin: 0;
 }
 
@@ -49,6 +55,7 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+pre,
 p {
   font-size: 1rem;
 }

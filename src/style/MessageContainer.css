@@ -23,7 +23,9 @@
   color: grey;
 }
 
-.msg > p {
+.text {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -31,4 +33,13 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+
+.link {
+  color: #7daaff;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
