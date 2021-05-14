@@ -11,7 +11,7 @@ function MessageContainer({ key = null, text = "", profile = null, username = ""
                 <p className="text" key={key}>
                     {text.split(' ').map(
                         word => word.startsWith('https://') ?
-                            <pre><a className="link" key={key} onClick={() => window.open(text)}> {word}</a></pre> :
+                            <pre><a className="link" key={key} onClick={() => window.open(word)}> {word}</a></pre> :
                             <pre> {word}</pre>
                     )}
                 </p>
