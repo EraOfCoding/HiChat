@@ -12,7 +12,18 @@
   padding-left: 10px;
 }
 
-.msg p {
+.msg > h6 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.msg > h6 > p {
+  padding-left: 5px;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.msg > p {
   flex-wrap: wrap;
 }
 

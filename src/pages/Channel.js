@@ -1,23 +1,40 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import MessageContainer from '../components/MessageContainer'
 
 import '../style/Channel.css'
 
-function Channel({ db = null, rf = null, signOut = null }) {
+function Channel({ db = null }) {
     const [messages, setMessages] = useState([])
+
+    const channelScrollref = useRef()
+
+    const buildDate = (d) => {
+        let months = ["January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"]
+
+        let date = d.getDate()
+        let month = months[d.getMonth()]
+        let year = d.getFullYear()
+        let hours = d.getHours()
+        let minutes = d.getMinutes()
+
+        if (date / 10 <= 0) date = "${date}0"
+
+        return `${hours}:${minutes}, ${date} ${month} ${year}`
+    }
 
     useEffect(() => {
         if (db) {
             const unsubscribe = db
                 .collection('messages')
                 .orderBy('createdAt')
-                .limit(100)
                 .onSnapshot(querySnapdhot => {
                     const data = querySnapdhot.docs.map(doc => ({
                         ...doc.data(),
                         id: doc.id,
                     }))
                     setMessages(data)
+                    channelScrollref.current.scrollIntoView({ behavior: 'smooth' })
                 })
 
             return unsubscribe
@@ -28,23 +45,28 @@ function Channel({ db = null, rf = null, signOut = null }) {
         <div className="channel-container">
             <div id="bg">
                 <div className="channel">
-                    <div className="msg-start">
-                        <h1>Welcome to HiChat</h1>
-                        <p>Hi chat! This is the beginning of our conversation.</p>
-                        <hr />
+                    <div>
+                        <div className="msg-start">
+                            <h1>Welcome to HiChat</h1>
+                            <p>Hi chat! This is the beginning of our conversation.</p>
+                            <hr />
+                        </div>
+                        {messages.map(message => {
+                            return (
+                                <div key={message.key}>
+                                    <MessageContainer
+                                        key={message.key}
+                                        className="message"
+                                        text={message.text}
+                                        username={message.username}
+                                        profile={message.photoURL}
+                                        time={message.createdAt !== null ? buildDate(message.createdAt.toDate()) : ""}
+                                    />
+                                </div>
+                            )
+                        })}
                     </div>
-                    {messages.map(message => {
-                        return (
-                            <MessageContainer
-                                key={message.key}
-                                className="message"
-                                text={message.text}
-                                username={message.username}
-                                profile={message.photoURL}
-                            />
-                        )
-                    })}
-                    <span className="msg-bottom" ref={rf} />
+                    <div ref={channelScrollref}></div>
                 </div>
             </div>
         </div >

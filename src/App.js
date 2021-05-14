@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
@@ -36,8 +36,6 @@ function App() {
   const [user, setUser] = useState(() => auth.currentUser)
   const [initializing, setInitializing] = useState(true)
   const [text, setText] = useState("")
-
-  const channelScrollref = useRef()
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
@@ -81,7 +79,6 @@ function App() {
 
     try {
       setText('')
-      channelScrollref.current.scrollIntoView({ behavior: 'smooth' })
       await messagesRef.add({
         text: text,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
@@ -103,7 +100,7 @@ function App() {
       {user ? (
         <div>
           <Navbar signout={signOut} />
-          <Channel rf={channelScrollref} db={db} />
+          <Channel db={db} />
           <Submit text={text} setText={setText} submit={sendMessage} />
         </div>
       ) : (

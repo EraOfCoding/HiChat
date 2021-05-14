@@ -1,12 +1,12 @@
 import React from 'react';
 import '../style/MessageContainer.css'
 
-function MessageContainer({ key = null, text = "", profile = null, username = "" }) {
+function MessageContainer({ key = null, text = "", profile = null, username = "", time = [] }) {
     return (
-        <div className="msg-container">
+        <div key={key} className="msg-container">
             <img className="profile" src={profile} />
             <div className="msg">
-                <h6 className="username">{username}</h6>
+                <h6 className="username">{username} <p>{time}</p></h6>
                 <p className="text" key={key}>{text}</p>
             </div>
         </div>
