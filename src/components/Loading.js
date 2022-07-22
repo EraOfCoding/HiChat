@@ -1,9 +1,10 @@
 import React from 'react'
 import '../style/Loading.css'
+import calculateAge from '../utils/calculateAge'
 
 function Loading() {
     const phrases = [
-        "Did you know that creator is a 13 years old student?",
+        `Did you know that the creator is a ${calculateAge()} year old student?`,
         "By the way do you know what Karlson is?",
         "Please give me 100% on SAT xd",
         "Tatakae, tatakae means fight, fight",
